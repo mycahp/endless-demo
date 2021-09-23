@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray);
+  height: 30px;
+  padding: 10px 10%;
+
+  .logo {
+    filter: invert(77%) sepia(47%) saturate(486%) hue-rotate(110deg)
+      brightness(93%) contrast(94%);
+    height: 75%;
+  }
+}

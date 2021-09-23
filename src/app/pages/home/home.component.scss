@@ -1,40 +1,41 @@
 .home-container {
-  display: flex;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
 
-  .header {
-    display: flex;
-    align-items: center;
-    background-color: var(--gray);
-    height: 2.5rem;
-    padding: 10px 10%;
-
-    .logo {
-      filter: invert(77%) sepia(47%) saturate(486%) hue-rotate(110deg)
-        brightness(93%) contrast(94%);
-      height: 75%;
-    }
-  }
   .hero {
-    flex: 2;
     display: grid;
+    max-height: 75vh;
     background: url("/assets/photo-couch_2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    padding: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    padding-top: 250px;
+    padding-bottom: 250px;
+
     align-content: flex-end;
-    color: #D7D4D3;
+    color: #d7d4d3;
 
     .hero-text {
-        width: 50%;
+      width: 50%;
 
-        h1 {
-            font-size: 5rem;
-        }
+      h1 {
+        font-size: 5rem;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
   .main-content {
@@ -42,12 +43,23 @@
     height: auto;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 100px;
     text-align: center;
     color: var(--gray);
 
+    h2 {
+      font-size: 2rem;
+    }
+
     .steps {
-        display: grid;
-        grid-auto-flow: column;
+      display: flex;
+      flex-direction: row;
+
+      app-step {
+        flex: 1;
+        flex-wrap: 1;
+      }
     }
   }
 }
