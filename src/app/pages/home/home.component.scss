@@ -1,0 +1,53 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray);
+    height: 2.5rem;
+    padding: 10px 10%;
+
+    .logo {
+      filter: invert(77%) sepia(47%) saturate(486%) hue-rotate(110deg)
+        brightness(93%) contrast(94%);
+      height: 75%;
+    }
+  }
+  .hero {
+    flex: 2;
+    display: grid;
+    background: url("/assets/photo-couch_2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 10%;
+    align-content: flex-end;
+    color: #D7D4D3;
+
+    .hero-text {
+        width: 50%;
+
+        h1 {
+            font-size: 5rem;
+        }
+    }
+  }
+  .main-content {
+    flex: 1;
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    color: var(--gray);
+
+    .steps {
+        display: grid;
+        grid-auto-flow: column;
+    }
+  }
+}
