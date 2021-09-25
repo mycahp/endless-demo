@@ -1,40 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-    height: 100%;
-    width: 100%;
+@import './breakpoints.scss';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 12px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 16px;
+  }
 }
 
 body {
-    margin: 0px;
-    font-family: 'Lato', sans-serif;
+  margin: 0px;
+  font-family: "Lato", sans-serif;
 
-    --gray: #222222;
-    --teal: #50E3C2;
-    --dark-teal: #3dad94;
+  --gray: #222222;
+  --teal: #50e3c2;
+  --dark-teal: #3dad94;
 }
 
 button {
-    background-color: var(--teal);
-    color: var(--gray);
-    border-radius: 100px;
-    padding: 10px 25px;
-    font-weight: 900;
-    border: none;
-    transition: 0.4s;
-    border: 1px solid var(--teal);
+  background-color: var(--teal);
+  color: var(--gray);
+  border-radius: 100px;
+  padding: 10px 25px;
+  font-weight: 900;
+  border: none;
+  transition: 0.4s;
+  border: 1px solid var(--teal);
 
+  &:hover {
+    background-color: var(--dark-teal);
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+  }
 
-    &:hover {
-        background-color: var(--dark-teal);
-        color: white;
-        cursor: pointer;
-        border: 1px solid white;
-    }
-
-    &:active {
-        background-color: var(--dark-teal);
-        color: white;
-        border: 1pix solid blue;
-    }
+  &:active {
+    background-color: var(--dark-teal);
+    color: white;
+    border: 1pix solid blue;
+  }
 }

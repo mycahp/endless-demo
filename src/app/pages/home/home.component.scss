@@ -1,3 +1,5 @@
+@import '../../../breakpoints.scss';
+
 .home-container {
   height: 100%;
   flex-direction: column;
@@ -6,7 +8,11 @@
   .hero {
     display: grid;
     max-height: 75vh;
-    background: url("/assets/photo-couch_2x.jpg");
+    background: url("/assets/photo-couch.jpg");
+    @media (min-width: 1920px) {
+      background: url("/assets/photo-couch_2x.jpg");
+      background-repeat: no-repeat;
+    }
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,6 +33,7 @@
         font-size: 5rem;
         margin-bottom: 0;
         margin-top: 0;
+        font-weight: 400;
       }
 
       h2 {
@@ -53,12 +60,16 @@
     }
 
     .steps {
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid-auto-flow: row;
+
+      @media (min-width: $screen-lg-min) {
+        gap: 25px;
+        grid-auto-flow: column;
+      }
 
       app-step {
         flex: 1;
-        flex-wrap: 1;
       }
     }
   }
