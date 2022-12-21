@@ -11,6 +11,6 @@ export class StepsService {
   constructor(private http: HttpClient) { }
 
   getSteps(): Observable<any> {
-    return this.http.get('https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge');
+    return this.http.get('https://tntrhl7mm0.execute-api.us-east-1.amazonaws.com/Prod/steps');
   }
 }
